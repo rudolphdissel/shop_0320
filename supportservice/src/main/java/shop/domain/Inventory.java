@@ -37,7 +37,7 @@ public class Inventory {
     //<<< Clean Arch / Port Method
     public static void decreaseInventory(DeliveryStarted deliveryStarted) {
 
-        repository().findById(Long.valueOf(deliveryStarted.getProductId())).ifPresent(inventory->{
+        repository().findById(Long.valueOf(deliveryStarted.getproductId())).ifPresent(inventory->{
             
                 inventory.setQty(inventory.getQty() - deliveryStarted.getQty()); 
 
